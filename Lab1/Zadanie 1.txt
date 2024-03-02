@@ -1,0 +1,11 @@
+Podczas zwykłej implementacji interfejsu wykorzystujemy go do stworzenia klas zawierających podobną funkcjonalność np. interfejs pojazd i klasy samochód lub rower. Zarówno klasy samochód i rower posiadają metodę jedź.
+Natomiast podczas implementacji wzorca strategia wykorzystujemy go do stworzenia różnych wariantów jednej funkcjonalności np. interfejs FlyBehavior i strategie FlyNoWay i FlyWithWings będące klasami implementującymi konkretną funkcjonalność.
+
+Zalety:
+-Unikanie instrukcji warunkowych
+-możliwość wyboru implementacji – możemy np. wybrać między FlyNoWay i FlyWithWings
+-możliwość niezależnego testowania poszczególnych strategii
+
+Wady:
+-Wprowadzenie klasy dla każdej strategii może prowadzić do zwiększenia liczby klas w projekcie.
+-Wybór odpowiedniej strategii może być skomplikowany, jeżeli mamy wiele możliwości do wyboru.
