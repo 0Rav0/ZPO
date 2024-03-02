@@ -1,8 +1,8 @@
 package Zadanie3;
 
 public class Car {
-    public int maxSpeed;
-    public String carName;
+    private int maxSpeed;
+    private String carName;
 
     public Car(int maxSpeed, String carName) {
         this.maxSpeed = maxSpeed;
@@ -15,5 +15,13 @@ public class Car {
 
     public String getCarName() {
         return carName;
+    }
+
+    public void setMaxSpeed(int maxSpeed) {
+        this.maxSpeed = maxSpeed;
+    }
+
+    public void setCarName(String carName) {
+        this.carName = carName;
     }
 }
