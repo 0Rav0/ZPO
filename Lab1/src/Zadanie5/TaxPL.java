@@ -1,8 +1,8 @@
 package Zadanie5;
 
-public class TaxPL implements Tax{
+public class TaxPL implements Tax {
     @Override
-    public void calculate() {
-        System.out.println("Poland tax");
+    public double calculate(double price) {
+        return price * 0.23;
     }
 }

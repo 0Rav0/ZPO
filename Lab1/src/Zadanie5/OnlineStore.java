@@ -1,13 +1,16 @@
 package Zadanie5;
 
-public abstract class OnlineStore {
+public class OnlineStore {
     Tax tax;
-
     public OnlineStore(Tax tax) {
         this.tax = tax;
     }
 
-    public void calculateTax(){
-        this.tax.calculate();
+    public double calculateTax(double price){
+        return this.tax.calculate(price);
+    }
+
+    public void setTax(Tax tax) {
+        this.tax = tax;
     }
 }

@@ -10,16 +10,16 @@ public class Pracownik {
         this.zawod = zawod;
     }
 
-    public Pracowac getPracowac() {
-        return pracowac;
+    public void pracuj() {
+         this.pracowac.pracuj();
     }
 
-    public Dojezdzac getDojezdzac() {
-        return dojezdzac;
+    public void dojezdzaj() {
+        this.dojezdzac.dojezdzaj();
     }
 
-    public SpedzanieWolnegoCzasu getSpedzanieWolnegoCzasu() {
-        return spedzanieWolnegoCzasu;
+    public void spedzajWolnyCzas() {
+        this.spedzanieWolnegoCzasu.spedzajWolnyCzas();
     }
 
     public String getZawod() {
@@ -41,4 +41,5 @@ public class Pracownik {
     public void setZawod(String zawod) {
         this.zawod = zawod;
     }
+
 }

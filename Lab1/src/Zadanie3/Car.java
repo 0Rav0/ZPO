@@ -1,27 +1,15 @@
 package Zadanie3;
 
 public class Car {
-    private int maxSpeed;
-    private String carName;
+    String carName;
+    CarSpeed carSpeed;
 
-    public Car(int maxSpeed, String carName) {
-        this.maxSpeed = maxSpeed;
+    public Car(String carName, CarSpeed carSpeed) {
         this.carName = carName;
+        this.carSpeed = carSpeed;
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
-    }
-
-    public String getCarName() {
-        return carName;
-    }
-
-    public void setMaxSpeed(int maxSpeed) {
-        this.maxSpeed = maxSpeed;
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
+    public void carSpeed(){
+        this.carSpeed.speed();
     }
 }
