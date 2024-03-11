@@ -1,8 +1,8 @@
 package Zadanie1;
 
-public class Cannon implements Weapon{
+public class Cannon implements EquippedWeapon {
     @Override
-    public void equippedWeapon() {
+    public void drawWeapon() {
         System.out.println("has Cannon");
     }
 }

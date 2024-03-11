@@ -10,17 +10,22 @@ public class MainAdvertisement {
         System.out.println("randomAdForRandomPerson");
         System.out.println("PersonId "+randomAdForRandomPerson.getPersonId());
         System.out.println("AdId "+randomAdForRandomPerson.getAdId());
-        randomAdForRandomPerson.showPreferredLanguage();
+        randomAdForRandomPerson.translateToPreferredLanguage();
         randomAdForRandomPerson.sendAd();
 
         randomAdForRandomPerson.setPreferredLanguage(new PreferredPL());
-        System.out.println("\nChange language");
-        randomAdForRandomPerson.showPreferredLanguage();
+        System.out.println("\n");
+        randomAdForRandomPerson.translateToPreferredLanguage();
         randomAdForRandomPerson.sendAd();
 
         randomAdForRandomPerson.setSendMethod(new VoiceMessage());
-        System.out.println("\nChange send method");
-        randomAdForRandomPerson.showPreferredLanguage();
+        System.out.println("\n");
+        randomAdForRandomPerson.translateToPreferredLanguage();
+        randomAdForRandomPerson.sendAd();
+
+        randomAdForRandomPerson.setPreferredLanguage(new PreferredDE());
+        System.out.println("\n");
+        randomAdForRandomPerson.translateToPreferredLanguage();
         randomAdForRandomPerson.sendAd();
 
     }

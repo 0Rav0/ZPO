@@ -16,7 +16,7 @@ public class Advertisement {
         this.sendMethod = sendMethod;
     }
 
-    public void showPreferredLanguage(){
+    public void translateToPreferredLanguage(){
         preferredLanguage.language();
     }
 
