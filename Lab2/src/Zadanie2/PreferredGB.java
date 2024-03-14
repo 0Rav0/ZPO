@@ -2,7 +2,7 @@ package Zadanie2;
 
 public class PreferredGB implements PreferredLanguage{
     @Override
-    public void language() {
-        System.out.println("Translators into English");
+    public String translate(String adContent) {
+        return adContent + " Translate into English";
     }
 }
