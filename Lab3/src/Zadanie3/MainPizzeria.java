@@ -1,6 +1,6 @@
 package Zadanie3;
 
-public class Main {
+public class MainPizzeria {
     public static void main(String[] args) {
         Pizza margheritta = new Cheese(new Sauce(new Margheritta()));
         Pizza capriciosa = new Cheese(new Ham(new Sauce(new Capriciosa())));
