@@ -8,4 +8,8 @@ public class Diavola extends Pizza {
     public double cost() {
         return 16.99;
     }
+
+    @Override
+    public void omittingIngredient(Class<? extends IngredientDecorator> ingredient) {
+    }
 }

@@ -1,17 +1,18 @@
 package Zadanie3;
 
 public class Ham extends IngredientDecorator {
-    Pizza pizza;
-
     public Ham(Pizza pizza) {
-        this.pizza = pizza;
+        super(pizza);
+        description = ", Szynka";
+        cost = .45;
     }
 
     public String getDescription() {
-        return pizza.getDescription() + ", Szynka";
+        return pizza.getDescription() + description;
     }
 
     public double cost() {
-        return .45 + pizza.cost();
+        return cost + pizza.cost();
     }
+
 }

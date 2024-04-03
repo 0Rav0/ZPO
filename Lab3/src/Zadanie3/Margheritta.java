@@ -8,4 +8,8 @@ public class Margheritta extends Pizza {
     public double cost() {
         return 14.99;
     }
+
+    @Override
+    public void omittingIngredient(Class<? extends IngredientDecorator> ingredient) {
+    }
 }

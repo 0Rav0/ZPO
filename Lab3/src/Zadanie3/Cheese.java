@@ -1,17 +1,18 @@
 package Zadanie3;
 
 public class Cheese extends IngredientDecorator {
-    Pizza pizza;
-
     public Cheese(Pizza pizza) {
-        this.pizza = pizza;
+        super(pizza);
+        description = ", Ser";
+        cost = .99;
     }
 
     public String getDescription() {
-        return pizza.getDescription() + ", Ser";
+        return pizza.getDescription() + description;
     }
 
     public double cost() {
-        return .99 + pizza.cost();
+        return cost + pizza.cost();
     }
+
 }

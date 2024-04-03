@@ -1,17 +1,18 @@
 package Zadanie3;
 
 public class Jalapeno extends IngredientDecorator {
-    Pizza pizza;
-
     public Jalapeno(Pizza pizza) {
-        this.pizza = pizza;
+        super(pizza);
+        description = ", Jalapeno";
+        cost = 1.99;
     }
 
     public String getDescription() {
-        return pizza.getDescription() + ", Jalapeno";
+        return pizza.getDescription() + description;
     }
 
     public double cost() {
-        return 1.99 + pizza.cost();
+        return cost+ pizza.cost();
     }
+
 }

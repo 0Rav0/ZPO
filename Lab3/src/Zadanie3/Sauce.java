@@ -1,17 +1,18 @@
 package Zadanie3;
 
 public class Sauce extends IngredientDecorator {
-    Pizza pizza;
-
     public Sauce(Pizza pizza) {
-        this.pizza = pizza;
+        super(pizza);
+        description = ", Sos";
+        cost = 1.11;
     }
 
     public String getDescription() {
-        return pizza.getDescription() + ", Sos";
+        return pizza.getDescription() + description;
     }
 
     public double cost() {
-        return 1.11 + pizza.cost();
+        return cost + pizza.cost();
     }
+
 }
