@@ -1,13 +1,18 @@
 package Zadanie1;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 public class NumberReader implements Subject{
     private int number;
-
+    private boolean iterating;
+    ArrayList<Observer> toRemove;
+    ArrayList<Observer> toAdd;
     ArrayList<Observer> observers;
 
     public NumberReader(){
+        toRemove = new ArrayList<>();
+        toAdd = new ArrayList<>();
         observers = new ArrayList<>();
     }
 
@@ -26,18 +31,38 @@ public class NumberReader implements Subject{
 
     @Override
     public void registerObserver(Observer o) {
-        observers.add(o);
+        if(observers.isEmpty() || !iterating)
+            observers.add(o);
+        else
+            toAdd.add(o);
     }
 
     @Override
     public void removeObserver(Observer o) {
-        observers.remove(o);
+        if(iterating)
+            toRemove.add(o);
+        else
+            observers.remove(o);
     }
 
     @Override
     public void notifyObservers() {
+        iterating = true;
+
         for (Observer o : observers){
             o.update(number);
+        }
+
+        iterating = false;
+
+        if(!toAdd.isEmpty()){
+            observers.addAll(toAdd);
+            toAdd.clear();
+        }
+
+        if(!toRemove.isEmpty()){
+            observers.removeAll(toRemove);
+            toRemove.clear();
         }
     }
 }
