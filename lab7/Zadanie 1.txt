@@ -1,0 +1,1 @@
+Wzorzec projektowy Singleton jest najczęściej stosowany w sytuacjach, gdy potrzebujemy dokładnie jednej instancji klasy i chcemy zapewnić globalny dostęp do tej instancji np, dzienniki zdarzeń , ustawienia konfiguracyjne
