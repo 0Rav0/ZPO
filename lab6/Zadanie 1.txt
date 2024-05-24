@@ -1,0 +1,11 @@
+Głównym założeniem fabryki jest wytwarzanie obiektów, pozwala to na oddzielenie logiki tworzenia obieków od ich używania
+Można wyróżnić cztery rodzaje fabryk:
+	Factory (fabryka);
+	Factory Method (metoda wytwórcza);
+	Static Factory (fabryka statyczna)
+	Abstract Factory (fabryka abstrakcyjna)
+
+Zastosowania:
+	Wzorzec Fabryka jest szczególnie przydatny, gdy system musi tworzyć obiekty różnych typów, ale nie zna z góry, jakiego typu obiekt będzie potrzebny w danym momencie. Fabryka może decydować, jaki obiekt utworzyć na podstawie parametrów wejściowych,
+	Dzięki wzorcowi fabryka możemy wygodnie tworzyć obiekty o wspólnych cechach,
+	Dzięki temu, że logika tworzenia obiektów jest zawarta w Fabryce, klasa, która używa tych obiektów, nie musi znać szczegółów ich tworzenia.
